@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWCYLV6PXC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JWCYLV6PXC');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the future of intelligence with Zsurf AI.">
+    <title>AI - Zsurf Brand</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="Zsurf%20Brand.png">
+    <link rel="apple-touch-icon" href="Zsurf%20Brand.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #000000;
+            --subtext: #6e6e73;
+            --accent: #0071e3;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.8) !important;
+            backdrop-filter: blur(20px);
+            border-bottom: 0px;
+        }
+
+        .container {
+            max-width: 1060px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(48px, 8vw, 84px);
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin: 0 0 20px;
+        }
+
+        .hero p {
+            font-size: clamp(20px, 2.5vw, 26px);
+            color: var(--subtext);
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+
+        /* Large Sections */
+        .feature-section {
+            padding: 120px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            margin-bottom: 120px;
+        }
+
+        .feature-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-text h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 42px;
+            margin: 0 0 24px;
+        }
+
+        .feature-text p {
+            font-size: 19px;
+            color: var(--subtext);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .feature-image {
+            flex: 1.2;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        .feature-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Clean Gallery */
+        .gallery-head {
+            text-align: center;
+            padding: 80px 0 40px;
+        }
+
+        .gallery-head h2 {
+            font-size: 48px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .clean-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            padding-bottom: 100px;
+        }
+
+        .gallery-box {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .gallery-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+
+        .gallery-box:hover img {
+            transform: scale(1.03);
+        }
+
+        @media (max-width: 768px) {
+
+            .feature-item,
+            .feature-item:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .clean-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-image img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo">
+                <img src="Zsurf%20Brand.png" alt="Zsurf Brand Logo" class="logo-icon">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <h1>Intelligence. Fully reimagined.</h1>
+            <p>Zsurf AI is built to understand, assist, and empower. A seamless leap into the future of computing.</p>
+        </section>
+
+        <section class="container">
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h2>Everything in sync.</h2>
+                    <p>Designed to integrate perfectly with your workflow. Zsurf AI captures the context of your digital
+                        life to provide answers that actually matter.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="feature_sync.png" alt="Interface Sync">
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h2>Private by design.</h2>
+                    <p>Your data belongs to you. All neural processing happens on-device, ensuring your privacy is never
+                        compromised while providing world-class intelligence.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="feature_security.png" alt="Security First">
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h2>Effortless flow.</h2>
+                    <p>Predictive task solving means your AI anticipates your needs. From drafting research to complex
+                        data analysis, it's done before you even ask.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="feature_flow.png" alt="AI Flow">
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="gallery-head">
+                <h2>Visual Insights</h2>
+            </div>
+            <div class="clean-grid">
+                <div class="gallery-box">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
+                        alt="Insight 1">
+                </div>
+                <div class="gallery-box">
+                    <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&q=80&w=800"
+                        alt="Insight 2">
+                </div>
+                <div class="gallery-box">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
+                        alt="Insight 3">
+                </div>
+                <div class="gallery-box">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800"
+                        alt="Insight 4">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <div class="copyright">
+                <p>© 2026 Zsurf Brand. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

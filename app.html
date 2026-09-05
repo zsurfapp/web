@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWCYLV6PXC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JWCYLV6PXC');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Experience the next generation of web browsing with Zsurf Browser. Lightning-fast performance and advanced privacy.">
+    <title>Zsurf Browser - Zsurf Brand</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="Zsurf%20Brand.png">
+    <link rel="apple-touch-icon" href="Zsurf%20Brand.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Standalone detail page adjustments */
+        .app-detail {
+            display: block !important;
+            /* Always show in standalone page */
+            padding-top: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: static;
+            background: transparent;
+            min-height: auto;
+            transform: none;
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo">
+                <img src="Zsurf%20Brand.png" alt="Zsurf Brand Logo" class="logo-icon">
+            </a>
+        </div>
+        <div class="header-right">
+            <button class="icon-btn">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                        fill="currentColor" />
+                </svg>
+            </button>
+            <button class="icon-btn">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                        fill="currentColor" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- App Detail Section -->
+        <section class="app-detail" id="zsurf-browser">
+            <div class="detail-header">
+                <div class="detail-icon">
+                    <img src="Zsurf%20Browser.png" alt="Zsurf Browser"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="detail-info">
+                    <h1>Zsurf Browser</h1>
+                    <a href="#" class="developer">Zsurf</a>
+                </div>
+            </div>
+
+            <div class="detail-description">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <h3>About this app</h3>
+                    <a href="about.html" class="icon-btn" style="text-decoration: none; color: var(--text-primary);">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+                        </svg>
+                    </a>
+                </div>
+                <p>Experience the next generation of web browsing with Zsurf Browser. Lightning-fast performance,
+                    advanced privacy protection, built-in ad blocker, and a beautiful modern interface.</p>
+            </div>
+
+            <div class="data-safety">
+                <h3>Data safety</h3>
+                <p>Safety starts with understanding how developers collect and share your data.</p>
+                <a href="privacy.html" class="see-details">See details</a>
+            </div>
+
+            <div class="download-stores">
+                <h3>Download from</h3>
+                <div class="stores-grid" id="storesGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Zsurf Brand. All rights reserved.</p>
+    </footer>
+
+    <!-- Need to adjust script.js logic or inline it for this page since script.js assumes one page -->
+    <script>
+        // Inline script to render store buttons with Zsurf Logo from root
+        // Reuse logic but adjust paths for images if needed
+        const ZSURF_LOGO = '<img src="Zsurf Browser.png" alt="Zsurf" style="width: 100%; height: 100%; object-fit: contain;">';
+
+        const APP_STORES = [
+            { name: 'Google Play', icon: ZSURF_LOGO, label: 'GET IT ON', url: 'https://play.google.com/store/apps/details?id=com.browser.zsurf', available: true, color: '#01875f' },
+            { name: 'App Store', icon: ZSURF_LOGO, label: 'Download on the', url: '#', available: false, color: '#000000' },
+            { name: 'Amazon', icon: ZSURF_LOGO, label: 'Available at', url: '#', available: false, color: '#000000' },
+            { name: 'AppGallery', icon: ZSURF_LOGO, label: 'Explore it on', url: '#', available: false, color: '#C7000B' },
+            { name: 'Galaxy Store', icon: ZSURF_LOGO, label: 'Available on', url: '#', available: false, color: '#d4145a' },
+            { name: 'Microsoft', icon: ZSURF_LOGO, label: 'Get from', url: '#', available: false, color: '#00a4ef' }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('storesGrid');
+            if (!container) return;
+
+            container.innerHTML = APP_STORES.map(store => {
+                const badge = !store.available ? `<span class="coming-soon-badge" style="font-size: 8px; padding: 3px 6px; position: absolute; top: 0; right: 0; background: #f59e0b; color: white; border-bottom-left-radius: 6px; font-weight: 700;">Coming Soon</span>` : '';
+                const borderStyle = `border: 1px solid ${store.color}40; box-shadow: 0 1px 2px rgba(0,0,0,0.05);`;
+
+                return `
+                <a href="${store.url}" 
+                   class="store-btn ${store.available ? 'available' : 'coming-soon-btn'}"
+                   style="${borderStyle}; position: relative; overflow: hidden; display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 8px; text-decoration: none; background: white; transition: all 0.2s;"
+                   target="_blank">
+                    ${badge}
+                    <span class="store-icon" style="width: 28px; height: 28px; flex-shrink: 0;">${store.icon}</span>
+                    <div class="store-info" style="display: flex; flex-direction: column; line-height: 1.2;">
+                        <span class="store-label" style="color: #01875f; opacity: 0.8; font-size: 10px;">${store.label}</span>
+                        <span class="store-name" style="color: #01875f; font-weight: 600; font-size: 14px;">${store.name}</span>
+                    </div>
+                </a>
+            `}).join('');
+        });
+    </script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <div class="copyright">
+                <p>© 2026 Zsurf Brand. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+</html>

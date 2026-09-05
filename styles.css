@@ -1,0 +1,516 @@
+/* Zsurf Apps - Premium Play Store Design */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #01875f;
+    /* Play Store Green */
+    --primary-dark: #00664a;
+    --text-primary: #202124;
+    --text-secondary: #5f6368;
+    --bg-color: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --border-color: #dadce0;
+    --card-hover-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+body {
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    /* Center the logo */
+    align-items: center;
+    padding: 12px 24px;
+    background: var(--bg-color);
+    box-shadow: 0 1px 0 0 var(--border-color);
+}
+
+.header-left .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+
+.header-right {
+    display: flex;
+    gap: 16px;
+    position: absolute;
+    /* Position icons independently */
+    right: 24px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.icon-btn:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.icon-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Section Styling */
+.apps-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.section-title .subtitle {
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Apps Grid */
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 24px;
+}
+
+/* App Item Card */
+.app-item {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 12px;
+    padding: 12px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.app-item:hover {
+    background-color: var(--bg-secondary);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.app-icon {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.app-icon svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.app-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.app-rating,
+.app-status {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* Coming Soon Styling */
+.coming-soon .app-icon {
+    background-color: #f1f3f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-soon .app-icon.placeholder svg {
+    width: 50%;
+    height: 50%;
+    color: #dadce0;
+}
+
+/* App Detail View (Hidden by default in CSS, managed by JS/CSS target) */
+.app-detail {
+    display: none;
+    /* Hidden initially */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.app-detail.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.detail-header {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+    align-items: center;
+}
+
+.detail-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.detail-info h1 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.detail-info .developer {
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.detail-description {
+    margin-bottom: 32px;
+}
+
+.detail-description h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.detail-description p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.download-stores h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+/* Stores Grid (Reused) */
+.stores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+/* Store Buttons - Universal Style */
+.store-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.2s;
+    background: white;
+    position: relative;
+    /* For badge positioning */
+}
+
+.store-btn:hover {
+    background-color: var(--bg-secondary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #f59e0b;
+    /* Amber/Gold */
+    color: white;
+    font-size: 8px;
+    padding: 3px 6px;
+    border-bottom-left-radius: 6px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.store-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.store-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.store-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.store-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.store-name {
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: 40px 24px;
+    background: var(--bg-secondary);
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-top: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header {
+        padding: 12px 16px;
+    }
+
+    .apps-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .app-icon {
+        border-radius: 16px;
+    }
+
+    .section-title h2 {
+        font-size: 20px;
+    }
+
+    .detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .detail-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .detail-info h1 {
+        font-size: 24px;
+    }
+
+    .stores-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Banner Section */
+.banner-section {
+    margin: 60px 0;
+    padding: 0 24px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.banner-container {
+    background: #000;
+    border-radius: 28px;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    color: #fff;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 350px;
+}
+
+.banner-image-box {
+    flex: 1.2;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.banner-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    display: block;
+}
+
+.banner-info {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.banner-info h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.banner-info p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    max-width: 380px;
+}
+
+.banner-link {
+    color: #00c6ff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 12px;
+}
+
+.banner-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+    .banner-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .banner-image-box {
+        width: 100%;
+        height: 220px;
+    }
+
+    .banner-info {
+        padding: 30px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner-info h2 {
+        font-size: 24px;
+    }
+
+    .banner-info p {
+        font-size: 14px;
+    }
+}
